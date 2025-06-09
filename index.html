@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김도연 - 스타워즈 포트폴리오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet"  href="styles.css" />
+</head>
+<body>
+    <!-- 별빛 배경 -->
+    <div class="stars" id="stars"></div>
+
+    <!-- 스타워즈 오프닝 크롤링 -->
+    <div class="opening-crawl">
+        <div class="crawl-text">
+            <h1 style="font-size: 3rem; margin-bottom: 40px;">김도연</h1>
+            <p style="font-size: 1.5rem; line-height: 2;">
+                A long time ago in a galaxy far,<br>
+                far away....<br><br>
+                
+                A young developer embarks on<br>
+                an epic journey through the<br>
+                vast universe of programming,<br>
+                armed with the force of<br>
+                determination and the wisdom<br>
+                of continuous learning...
+            </p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Profile Header -->
+    <section class="profile-header">
+        <div class="profile-content">
+            <div class="profile-img hologram">김도연</div>
+            <h1 class="profile-name">김도연</h1>
+            <p class="profile-title">Jedi Developer | Full-Stack Apprentice</p>
+            <p class="profile-intro">성실하면서 책임감과 끈기가 있는 기본이 되어있는 개발자</p>
+            <div class="quick-contact">
+                <div class="quick-contact-item">📧 poi6857@gmail.com</div>
+                <div class="quick-contact-item">📱 010-9071-6857</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="card hologram">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #FFF;">
+                    시각디자인과 출신으로 웹 디자인 기초를 익히고, 현재 컴퓨터과학과에서 전공 지식을 쌓고 있습니다. 
+                    학원 3곳을 개근하며 Java, JavaScript, Python, SpringBoot 등 다양한 기술을 습득했고, 
+                    팀 프로젝트에서 View 개발부터 관리자 시스템까지 다양한 역할을 경험했습니다. 
+                    최근에는 클라우드 기술까지 학습하며 현대적인 개발 환경에 대한 이해를 넓히고 있습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">Frontend</div>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Backend</div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SpringBoot</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Database</div>
+                    <div class="skills-list">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Oracle DB</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">System & Design</div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Illustrator</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="project-item hologram">
+                <h3 class="project-title">찰칵 (카메라 커뮤니티 사이트)</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">SpringBoot</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
+                <p class="project-description">
+                    카메라 애호가들을 위한 커뮤니티 플랫폼으로, 카카오톡과 네이버 API를 활용한 소셜 로그인 기능과 결제 시스템을 구현했습니다. 
+                    MVC 모델 구조를 활용하여 체계적으로 개발했습니다.
+                </p>
+                <p class="project-role"><strong>담당 역할:</strong> View 개발 담당</p>
+            </div>
+
+            <div class="project-item hologram">
+                <h3 class="project-title">플라잉슈터 (축구장 예매 사이트)</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Oracle DB</span>
+                </div>
+                <p class="project-description">
+                    축구장 예약 및 대여 서비스를 제공하는 웹 플랫폼입니다. 사용자를 위한 커뮤니티 기능과 
+                    관리자를 위한 매출 분석 그래프를 구현하여 실무적인 관리 시스템을 경험했습니다.
+                </p>
+                <p class="project-role"><strong>담당 역할:</strong> 커뮤니티 부분 + 관리자 매출 그래프 제작</p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section">
+            <h2 class="section-title">Education & Training</h2>
+            
+            <div class="education-item">
+                <h3 class="education-title">한국방송통신대학교 (컴퓨터과학과)</h3>
+                <p class="education-period">2019년 8월 입학 - 재학 중</p>
+                <p class="education-description">컴퓨터과학 전공 과정 이수 중</p>
+            </div>
+
+            <div class="education-item">
+                <h3 class="education-title">대진디자인고등학교 (시각디자인과)</h3>
+                <p class="education-period">2016년 2월 졸업</p>
+                <p class="education-description">시각디자인 전공, 웹 디자인 기초 학습</p>
+            </div>
+
+            <div class="education-item">
+                <h3 class="education-title">코리아 IT 아카데미</h3>
+                <p class="education-period">2023년 6월 - 2024년 6월</p>
+                <p class="education-description">Java, JavaScript, MySQL, SpringBoot, Python 기초, Linux 기초 학습 | 개근상 수상</p>
+            </div>
+
+            <div class="education-item">
+                <h3 class="education-title">미래능력교육개발원</h3>
+                <p class="education-period">2018년 2월 - 11월 (9개월)</p>
+                <p class="education-description">Java, JavaScript, Oracle DB 학습 | 개근상 수상</p>
+            </div>
+
+            <div class="education-item">
+                <h3 class="education-title">양주시청 클라우드 기술자 교육</h3>
+                <p class="education-period">2025년 5월 이수</p>
+                <p class="education-description">클라우드 기술 전문 교육 과정 완료</p>
+            </div>
+        </section>
+
+        <!-- Experience & Achievements Section -->
+        <section class="section">
+            <h2 class="section-title">Experience & Achievements</h2>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-title">자격증</div>
+                    <p style="color: #FFF;">• SQLD (2024년 취득)</p>
+                    <p style="color: #FFF;">• 컴퓨터그래픽스 운용기능사 (2015년 취득)</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">주요 경력</div>
+                    <p style="color: #FFF;"><strong>네트워크 서버 보안 및 수리 업무</strong><br>
+                    2024년 11월 - 2025년 1월 (3개월)</p>
+                    <p style="color: #FFF;"><strong>요가학원 웹사이트 디자인 관리</strong><br>
+                    2015년 8월 - 2017년 7월<br>
+                    웹사이트 디자인 관리 및 회계 업무</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">성취사항</div>
+                    <p style="color: #FFF;">• 학원 2곳 개근상 수상</p>
+                    <p style="color: #FFF;">• 팀 프로젝트 2개 완성</p>
+                    <p style="color: #FFF;">• 클라우드 기술자 교육 이수</p>
+                    <p style="color: #FFF;">• 대체복무 (스프링 생산직, 2020-2022)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Philosophy Section -->
+        <section class="section">
+            <h2 class="section-title">Development Philosophy & Goals</h2>
+            <div class="philosophy-content">
+                <h3>개발 철학</h3>
+                <p>
+                    "기본기를 탄탄히 하고, 끝까지 완주하는 개발자"<br><br>
+                    학원 3곳을 개근하며 쌓은 성실함과, 프로젝트를 끝까지 완성하는 끈기를 바탕으로 
+                    안정적이고 신뢰할 수 있는 서비스를 만들어가고 싶습니다. 
+                    디자인부터 백엔드까지 다양한 영역을 경험하며 쌓은 폭넓은 시야로 
+                    사용자와 개발팀 모두를 만족시키는 개발자가 되겠습니다.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title" style="color: white;">Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">poi6857@gmail.com</div>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">010-9071-6857</div>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">💻</span>
+                <div class="contact-label">GitHub</div>
+                <div class="contact-value">KiDoYe</div>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">📁</span>
+                <div class="contact-label">Portfolio</div>
+                <div class="contact-value">CHALKAG 최종 프로젝트</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 별빛 생성
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numStars = 200;
+            
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // 부드러운 스크롤
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 스크롤 애니메이션
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.animation = 'slideInFromBottom 1s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // 모든 섹션 관찰
+        document.querySelectorAll('.section, .card, .project-item, .education-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(50px)';
+            observer.observe(element);
+        });
+
+        // 라이트세이버 사운드 효과 (클릭 시)
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.skill-tag, .tech-tag, .nav a')) {
+                // 시각적 효과만 (실제 사운드는 브라우저 제한으로 생략)
+                e.target.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    e.target.style.transform = '';
+                }, 200);
+            }
+        });
+
+        // 마우스 따라다니는 광선 효과
+        document.addEventListener('mousemove', function(e) {
+            const cursor = document.createElement('div');
+            cursor.style.position = 'fixed';
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursor.style.width = '2px';
+            cursor.style.height = '2px';
+            cursor.style.background = '#00D4FF';
+            cursor.style.borderRadius = '50%';
+            cursor.style.pointerEvents = 'none';
+            cursor.style.zIndex = '9999';
+            cursor.style.boxShadow = '0 0 10px #00D4FF';
+            cursor.style.animation = 'fadeOut 1s forwards';
+            
+            document.body.appendChild(cursor);
+            
+            setTimeout(() => {
+                if (cursor.parentNode) {
+                    cursor.parentNode.removeChild(cursor);
+                }
+            }, 1000);
+        });
+
+        // 페이지 로드 시 별 생성
+        window.addEventListener('load', function() {
+            createStars();
+            
+            // 오프닝 크롤링 후 메인 콘텐츠 표시
+            setTimeout(() => {
+                document.body.style.overflow = 'auto';
+            }, 8000);
+        });
+
+        // 키보드 단축키 (스타워즈 테마)
+        document.addEventListener('keydown', function(e) {
+            // 스페이스바로 라이트세이버 효과
+            if (e.code === 'Space' && !e.target.matches('input, textarea')) {
+                e.preventDefault();
+                document.body.style.filter = 'brightness(1.5) contrast(1.2)';
+                setTimeout(() => {
+                    document.body.style.filter = '';
+                }, 100);
+            }
+            
+            // 화살표 키로 섹션 이동
+            if (e.code === 'ArrowDown') {
+                e.preventDefault();
+                const sections = document.querySelectorAll('.section');
+                const current = Array.from(sections).find(section => {
+                    const rect = section.getBoundingClientRect();
+                    return rect.top >= 0 && rect.top <= window.innerHeight / 2;
+                });
+                const currentIndex = Array.from(sections).indexOf(current);
+                if (currentIndex < sections.length - 1) {
+                    sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            if (e.code === 'ArrowUp') {
+                e.preventDefault();
+                const sections = document.querySelectorAll('.section');
+                const current = Array.from(sections).find(section => {
+                    const rect = section.getBoundingClientRect();
+                    return rect.top >= 0 && rect.top <= window.innerHeight / 2;
+                });
+                const currentIndex = Array.from(sections).indexOf(current);
+                if (currentIndex > 0) {
+                    sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+
+        // 랜덤 글리치 효과
+        setInterval(() => {
+            const elements = document.querySelectorAll('.section-title');
+            const randomElement = elements[Math.floor(Math.random() * elements.length)];
+            if (randomElement && Math.random() < 0.1) { // 10% 확률
+                randomElement.style.textShadow = '2px 0 #ff0000, -2px 0 #00ffff';
+                setTimeout(() => {
+                    randomElement.style.textShadow = '0 0 20px #FFE81F';
+                }, 100);
+            }
+        }, 2000);
+
+        // 스크롤 진행률 표시
+        const progressBar = document.createElement('div');
+        progressBar.style.position = 'fixed';
+        progressBar.style.top = '0';
+        progressBar.style.left = '0';
+        progressBar.style.width = '0%';
+        progressBar.style.height = '3px';
+        progressBar.style.background = 'linear-gradient(90deg, #FFE81F, #00D4FF)';
+        progressBar.style.zIndex = '10000';
+        progressBar.style.boxShadow = '0 0 10px rgba(255, 232, 31, 0.8)';
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            progressBar.style.width = scrollPercent + '%';
+        });
+    </script>
+</body>
+</html>

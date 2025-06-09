@@ -1,0 +1,494 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', monospace;
+            background: #000;
+            color: #FFE81F;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 별빛 배경 */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* 스타워즈 오프닝 크롤링 */
+        .opening-crawl {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeOut 8s forwards;
+        }
+
+        .crawl-text {
+            font-size: 1.5rem;
+            text-align: center;
+            transform: perspective(400px) rotateX(25deg);
+            animation: crawl 6s linear forwards;
+        }
+
+        @keyframes crawl {
+            0% {
+                transform: perspective(400px) rotateX(25deg) translateY(100vh);
+            }
+            100% {
+                transform: perspective(400px) rotateX(25deg) translateY(-100vh);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+
+        /* 네비게이션 */
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: #00D4FF;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #00D4FF;
+            border-radius: 20px;
+            background: rgba(0, 212, 255, 0.1);
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+            font-weight: 700;
+        }
+
+        .nav a:hover {
+            background: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+            transform: scale(1.05);
+        }
+
+        /* 프로필 헤더 */
+        .profile-header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .profile-content {
+            animation: slideInFromTop 2s ease-out 8s both;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00D4FF, #FFE81F);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0 auto 30px;
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .profile-name {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #FFE81F;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #FFE81F; }
+            to { text-shadow: 0 0 30px #FFE81F, 0 0 40px #FFE81F; }
+        }
+
+        .profile-title {
+            font-size: 1.5rem;
+            color: #00D4FF;
+            margin-bottom: 20px;
+        }
+
+        .profile-intro {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #FFF;
+        }
+
+        .quick-contact {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .quick-contact-item {
+            background: rgba(255, 232, 31, 0.1);
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 1px solid #FFE81F;
+            box-shadow: 0 0 10px rgba(255, 232, 31, 0.3);
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 메인 콘텐츠 */
+        .main-content {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 100px;
+            animation: slideInFromBottom 1s ease-out;
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #FFE81F;
+            text-shadow: 0 0 20px #FFE81F;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #00D4FF, transparent);
+            margin: 20px auto;
+            box-shadow: 0 0 10px #00D4FF;
+        }
+
+        /* 카드 스타일 */
+        .card {
+            background: rgba(0, 212, 255, 0.05);
+            border: 2px solid #00D4FF;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.6);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+            animation: shimmer 1s linear;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #FFE81F;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* 스킬 태그 */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #FFE81F, #FFA500);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 0 10px rgba(255, 232, 31, 0.5);
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 232, 31, 0.8);
+        }
+
+        /* 프로젝트 아이템 */
+        .project-item {
+            background: rgba(255, 232, 31, 0.05);
+            border: 2px solid #FFE81F;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .project-item:hover {
+            transform: perspective(1000px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(255, 232, 31, 0.3);
+        }
+
+        .project-title {
+            font-size: 2rem;
+            color: #FFE81F;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #FFE81F;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(45deg, #00D4FF, #0080FF);
+            color: #FFF;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .project-description, .project-role {
+            color: #FFF;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* 교육 아이템 */
+        .education-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid #00D4FF;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .education-item:hover {
+            border-left-width: 8px;
+            transform: translateX(10px);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
+        }
+
+        .education-title {
+            font-size: 1.5rem;
+            color: #FFE81F;
+            margin-bottom: 10px;
+        }
+
+        .education-period {
+            color: #00D4FF;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .education-description {
+            color: #FFF;
+            line-height: 1.6;
+        }
+
+        /* 철학 섹션 */
+        .philosophy-content {
+            text-align: center;
+            background: radial-gradient(ellipse at center, rgba(255, 232, 31, 0.1) 0%, transparent 70%);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 232, 31, 0.3);
+        }
+
+        .philosophy-content h3 {
+            font-size: 2rem;
+            color: #FFE81F;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px #FFE81F;
+        }
+
+        .philosophy-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #FFF;
+        }
+
+        /* 연락처 섹션 */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 232, 31, 0.1));
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .contact-label {
+            color: #FFE81F;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .contact-value {
+            color: #FFF;
+            font-size: 1.1rem;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .profile-name {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .quick-contact {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* 홀로그램 효과 */
+        .hologram {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hologram::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.4), transparent);
+            animation: hologram-scan 3s infinite;
+        }
+
+        @keyframes hologram-scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
